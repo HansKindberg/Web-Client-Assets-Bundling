@@ -1,0 +1,19 @@
+﻿@page
+@model EnvironmentModel
+@{ ViewBag.Name = "Environment"; }
+<ul>
+	<li>
+		<strong>ApplicationName: </strong>@Model.Environment.ApplicationName
+	</li>
+	<li>
+		<strong>ContentRootPath: </strong>@Model.Environment.ContentRootPath
+	</li>
+	<li>
+		<strong>EnvironmentName: </strong>@Model.Environment.EnvironmentName
+	</li>
+	<li>
+		<strong>WebRootPath: </strong>@Model.Environment.WebRootPath
+	</li>
+</ul>
+<h2 class="h4">Files</h2>
+<partial model="@Tuple.Create(Model.Environment.ContentRootFileProvider, string.Empty)" name="Shared/_FileTree" />
