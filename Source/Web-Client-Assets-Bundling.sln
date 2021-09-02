@@ -10,6 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		..\ReadMe.md = ..\ReadMe.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{77442A11-2A6F-4DF3-933F-6772069332BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{7532D7E1-DC20-42CA-87C6-D98706CE6244}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\Docker-Deploy.yml = ..\.github\workflows\Docker-Deploy.yml
+	EndProjectSection
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{DBB41613-59D6-4D80-9324-383112D40AB9}"
 	ProjectSection(SolutionItems) = preProject
 		..\.dockerignore = ..\.dockerignore
@@ -37,6 +44,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F3482302-4AD1-4FE7-8231-DE3E309D052C} = {92A7B06B-2C1E-4450-801B-607643A877CB}
 		{DBB41613-59D6-4D80-9324-383112D40AB9} = {92A7B06B-2C1E-4450-801B-607643A877CB}
+		{77442A11-2A6F-4DF3-933F-6772069332BD} = {92A7B06B-2C1E-4450-801B-607643A877CB}
+		{7532D7E1-DC20-42CA-87C6-D98706CE6244} = {77442A11-2A6F-4DF3-933F-6772069332BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {329B5F2D-3741-4DD4-8C7D-AD1D10EF66BA}
