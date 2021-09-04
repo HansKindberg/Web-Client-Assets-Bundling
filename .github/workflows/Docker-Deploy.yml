@@ -33,6 +33,7 @@ jobs:
       - name: "Build and push Docker-image"
         uses: docker/build-push-action@v2
         with:
+          context: "."
           file: "Source/Application/Dockerfile"
           push: true
           tags: hanskindberg/web-client-assets-bundling:latest,hanskindberg/web-client-assets-bundling:${{ steps.today.outputs.value }}.${{ github.run_number }}
