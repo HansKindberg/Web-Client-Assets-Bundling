@@ -76,7 +76,7 @@ Links:
 The location for the resource-group, eg. westeurope. List of available locations:
 - https://azureprice.net/region
 
-#### 1.1.3 AZURE_RESOURCE_GROUP_NAME }}
+#### 1.1.3 AZURE_RESOURCE_GROUP_NAME
 
 The name of the resource-group.
 
