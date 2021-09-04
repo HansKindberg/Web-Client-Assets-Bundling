@@ -43,7 +43,7 @@ namespace Application
 		{
 			services.Configure<ForwardedHeadersOptions>(options =>
 			{
-				options.ForwardedHeaders = ForwardedHeaders.All;
+				options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
 			});
 
 			services.AddRazorPages();
