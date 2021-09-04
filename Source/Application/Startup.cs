@@ -27,7 +27,7 @@ namespace Application
 
 		#region Methods
 
-		public virtual void Configure(IApplicationBuilder applicationBuilder, IWebHostEnvironment env)
+		public virtual void Configure(IApplicationBuilder applicationBuilder)
 		{
 			applicationBuilder
 				.UseDeveloperExceptionPage()
