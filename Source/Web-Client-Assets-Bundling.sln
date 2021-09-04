@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{DBB41613-59D6-4D80-9324-383112D40AB9}"
 	ProjectSection(SolutionItems) = preProject
-		..\.dockerignore = ..\.dockerignore
+		.dockerignore = .dockerignore
 		..\.editorconfig = ..\.editorconfig
 		..\.gitignore = ..\.gitignore
 		..\NuGet.config = ..\NuGet.config

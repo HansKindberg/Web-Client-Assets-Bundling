@@ -25,5 +25,5 @@ LICENSE
 README.md
 
 # Custom
-Source/Application/appsettings.json
-Source/Application/appsettings.*.json
+Application/appsettings.json
+Application/appsettings.*.json
