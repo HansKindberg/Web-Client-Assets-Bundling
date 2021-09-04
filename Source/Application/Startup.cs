@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -31,6 +32,7 @@ namespace Application
 		{
 			applicationBuilder
 				.UseDeveloperExceptionPage()
+				.UseForwardedHeaders()
 				.UseStaticFiles()
 				.UseRouting()
 				.UseAuthorization()
@@ -39,6 +41,11 @@ namespace Application
 
 		public virtual void ConfigureServices(IServiceCollection services)
 		{
+			services.Configure<ForwardedHeadersOptions>(options =>
+			{
+				options.ForwardedHeaders = ForwardedHeaders.All;
+			});
+
 			services.AddRazorPages();
 		}
 
