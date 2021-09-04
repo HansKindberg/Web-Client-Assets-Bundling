@@ -1,0 +1,27 @@
+name: "Azure-deploy"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: "Deploy"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+      - name: "Sign in to azure"
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: "Ensure azure-resource-group"
+        uses: azure/cli@v1
+        with:
+          inlineScript: |
+            az group create --location ${{ secrets.AZURE_RESOURCE_GROUP_LOCATION }} --name ${{ secrets.AZURE_RESOURCE_GROUP_NAME }}
+      - name: "Deploy azure-resources"
+        uses: azure/arm-deploy@v1
+        with:
+          parameters: siteName=${{ secrets.AZURE_RESOURCE_GROUP_NAME }}
+          resourceGroupName: ${{ secrets.AZURE_RESOURCE_GROUP_NAME }}
+          template: "./.github/workflows/Azure-Deploy.json"
