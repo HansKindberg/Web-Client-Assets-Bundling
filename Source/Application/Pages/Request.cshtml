@@ -1,7 +1,26 @@
 ﻿@page
 @model RequestModel
 @{ ViewBag.Name = "Request"; }
-<p>Request is https: <strong>@Request.IsHttps</strong></p>
+<ul>
+	<li>
+		<strong>Host: </strong>@Request.Host
+	</li>
+	<li>
+		<strong>Host.Host: </strong>@Request.Host.Host
+	</li>
+	<li>
+		<strong>Host.Port: </strong>@Request.Host.Port
+	</li>
+	<li>
+		<strong>IsHttps: </strong>@Request.IsHttps
+	</li>
+	<li>
+		<strong>Host.Protocol: </strong>@Request.Protocol
+	</li>
+	<li>
+		<strong>Scheme: </strong>@Request.Scheme
+	</li>
+</ul>
 <h2 class="h4">Request-headers</h2>
 @if(!Request.Headers.Any())
 {
