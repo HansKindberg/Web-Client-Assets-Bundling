@@ -5,7 +5,7 @@
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-		<NoWarn>CA1014;IDE0130</NoWarn>
+		<NoWarn>CA1014;CS8032;CS8033;IDE0130</NoWarn>
 		<TargetFramework>net5.0</TargetFramework>
 		<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
 		<UserSecretsId>a91eb4b4-f028-47fd-b0ad-fb4b20ec2323</UserSecretsId>
